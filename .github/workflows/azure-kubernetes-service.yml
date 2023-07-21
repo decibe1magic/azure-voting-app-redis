@@ -89,6 +89,11 @@ jobs:
           cluster-name: ${{ env.CLUSTER_NAME }}
           admin: 'false'
           use-kubelogin: 'true'
+      
+      # Update YAML Image
+      - name: Update YAML Image
+        run: |
+          sed -i 's|acrname.azurecr.io/imagename:v1|${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.run_number }}|g' ${{ env.DEPLOYMENT_MANIFEST_PATH }}
 
       # Deploys application based on given manifest file
       - name: Deploys application
