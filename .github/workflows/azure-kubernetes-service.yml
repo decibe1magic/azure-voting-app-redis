@@ -35,7 +35,7 @@ env:
   CONTAINER_NAME: "redis"
   RESOURCE_GROUP: ${{ vars.RESOURCE_GROUP_NAME }}
   CLUSTER_NAME: ${{ vars.CLUSTER_NAME }}
-  DEPLOYMENT_MANIFEST_PATH: "azure-vote-all-in-one-redis.yaml"
+  DEPLOYMENT_MANIFEST_PATH: "./azure-vote-all-in-one-redis.yaml"
 
 jobs:
   buildImage:
