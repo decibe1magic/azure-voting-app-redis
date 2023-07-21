@@ -15,7 +15,7 @@ env:
   RESOURCE_GROUP: ${{ vars.RESOURCE_GROUP_NAME }}
 
 jobs:
-  buildImage:
+  build:
     runs-on: ubuntu-latest
     steps:
       # Checks out the repository this file is in
