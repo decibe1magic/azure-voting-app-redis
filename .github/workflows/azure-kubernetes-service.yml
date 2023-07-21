@@ -34,7 +34,7 @@ env:
   AZURE_CONTAINER_REGISTRY: ${{ vars.REGISTRY_NAME }}
   CONTAINER_NAME: "redis"
   RESOURCE_GROUP: ${{ vars.RESOURCE_GROUP_NAME }}
-  CLUSTER_NAME: ${{ var.sCLUSTER_NAME }}
+  CLUSTER_NAME: ${{ var.CLUSTER_NAME }}
   DEPLOYMENT_MANIFEST_PATH: "azure-vote-all-in-one-redis.yaml"
 
 jobs:
